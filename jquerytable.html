@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="E:\INTERNSHIP\CSS/CSS extension.css" >
+    <link rel="javascript" href="E:\INTERNSHIP\JAVA SCRIPT/javascriptextension.js">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="col-3 mx-auto">
+                <form>
+                    <h1 style="text-align: center;">FORM</h1>
+            
+                    <label>NAME</label>
+                    <input type="text" id="babu">
+            
+                    <label>EMAIL</label>
+                    <input type="EMAIL" id="ne">
+            
+                    <label>NUMBER</label>
+                    <input type="NUMBER" id="khana">
+            
+                    <label>ADDRESS</label>
+                    <input type="ADDRESS" id="khaya">
+            
+                    
+                    <input type="button" value="submit"  id="submit">
+             </form>  
+            </div>
+              
+            </div>
+    
+    </div>
+    
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>name</th>
+            <td id="a1"></td>
+        </tr>
+
+        <tr>
+            <th>email</th>
+            <td id="a2"></td>
+        </tr>
+        <tr>
+            <th>email</th>
+            <td id="a3"></td>
+        </tr>
+
+        <tr>
+            <th>address</th>
+            <td id="a4"></td>
+        </tr>
+    </table>
+</div>
+
+    <script>
+         $(document).ready(function(){
+             $("#submit").click(function(){
+                 var name=$("#babu").val();
+                 var email=$("#ne").val();
+                 var number=$("#khana").val();
+                 var address=$("#khaya").val();
+
+        // window.alert(name+"\n"+email+"\n"+number+"\n"+address)
+
+
+        $("#a1").html(name);
+        $("#a2").html(email);
+        $("#a3").html(number);
+        $("#a4").html(address);
+
+
+             });
+         });
+
+</script>
+
+</body>
+</html> if ( dob== "") {
+    $("#error5").html("name can't be blank");
+    $("#error5").css("color", "blue");
+}
+else{
+    $("#error5").html("");
+       
+}

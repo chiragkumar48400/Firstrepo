@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="E:\INTERNSHIP\CSS/CSS extension.css" >
+    <link rel="javascript" href="E:\INTERNSHIP\JAVA SCRIPT/javascriptextension.js">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="col-3 mx-auto">
+                <form>
+                    <h1 style="text-align: center;">FORM</h1>
+            
+                    <select name="chirag" id="state">
+                        <option>select state</option>
+                        <option value="odisha">odisha</option>
+                        <option value="sikim">sikim</option>
+                        <option value="jammu">jammu</option>
+                        <option value="kashmir">kashmir</option>
+                    </select>
+
+                    <select name="rohan" id="district"> </select>
+            
+                    <input type="button" value="submit"  id="submit">
+             </form>  
+            </div>
+              
+            </div>
+    
+    </div>
+
+    <script>
+         $(document).ready(function(){
+             $("#state").change(function(){
+                 var name=$("#state").val();
+                 alert(name);
+            
+
+        // window.alert(name+"\n"+email+"\n"+number+"\n"+address)
+
+
+        // $("#a1").html(name);
+        // $("#a2").html(email);
+        // $("#a3").html(number);
+        // $("#a4").html(address);
+
+
+             });
+         });
+
+</script>
+
+</body>
+</html>

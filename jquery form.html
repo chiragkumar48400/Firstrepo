@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="E:\INTERNSHIP\CSS/CSS extension.css" >
+    <link rel="javascript" href="E:\INTERNSHIP\JAVA SCRIPT/javascriptextension.js">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <form>
+    	<h1 style="text-align: center;">FORM</h1>
+
+    	<label>NAME</label>
+    	<input type="text" id="babu"><br><br>
+
+    	<label>EMAIL</label>
+    	<input type="EMAIL" id="ne"><br><br>
+
+    	<label>NUMBER</label>
+    	<input type="NUMBER" id="khana"><br><br>
+
+    	<label>ADDRESS</label>
+    	<input type="ADDRESS" id="khaya"><br><br>
+
+    	
+        <button type="SUBMIT" style="background-color:green" id="a1">SUBMIT</button>
+    </div>
+<script>
+         $(document).ready(function(){
+             $("#a1").click(function(){
+                 var name=$("#babu").val();
+                 var email=$("#ne").val();
+                 var number=$("#khana").val();
+                 var address=$("#khaya").val();
+
+        window.alert(name+"\n"+email+"\n"+number+"\n"+address)
+             });
+         });
+</script>
+</body>
+</html>

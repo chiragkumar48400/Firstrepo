@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <form>
+                <h1 style="text-align: center;">FORM</h1>
+
+                <label>NAME</label>
+                <input type="text" id="baby"><br><br>
+                <span id="error"></span>
+                <br>
+                <label>EMAIL</label>
+                <input type="EMAIL" id="ne"><br><br>
+                <span id="error1"></span>
+                <br>
+                <label>NUMBER</label>
+                <input type="NUMBER" id="khana"><br><br>
+                <span id="error2"></span>
+                <br>
+                <label>ADDRESS</label>
+                <input type="ADDRESS" id="khaya"><br><br>
+                <span id="error3"></span>
+                <br>
+
+                <button type="button" style="background-color:green" id="a1">SUBMIT</button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#a1").click(function () {
+                var name = $("#baby").val();
+                var email = $("#ne").val();
+                var number = $("#khana").val();
+                var address = $("#khaya").val();
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                //alert(name+"\n"+email+"\n"+number+"\n"+address)
+                if (name == "") {
+                    $("#error").html("name can't be blank");
+                    $("#error").css("color", "blue");
+                }
+               
+                if (email == "") {
+                    $("#error1").html("name can't be blank");
+                    $("#error1").css("color", "blue");
+                }
+                else{
+                    if(email.match(mailformat)){
+                        $("#error1").html("");
+                    }
+                    else{
+                        $("#error1").html("invalid email");
+                    }
+                }
+
+                if (number == "") {
+                    $("#error2").html("name can't be blank");
+                    $("#error2").css("color", "red");
+                }
+                else{
+                    if(number.length < 10 || number.length > 10){
+                        $("#error2").html("Invalid number");
+                        $("#error2").css("color", "red");
+
+                    }
+                    else{
+                        $("#error2").html("valid number");
+                        $("#error2").css("color", "green");
+                    }
+                }
+
+                if (address == "") {
+                    $("#error3").html("name can't be blank");
+                    $("#error3").css("color", "blue");
+                }
+            });
+        });   
+    </script>
+
+</body>
+
+</html>
